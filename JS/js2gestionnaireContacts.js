@@ -14,10 +14,13 @@ $(document).ready(function(){
 	g.tabloContact.push(contact1);	
 	g.tabloContact.push(contact2);
 
-
+	var saveeHtml;
 	$(".pionCouleur").hover(function(){
+		saveeHtml= $(".pionCouleur").html();
 		var id = $(".pionCouleur").attr("data-id");
 		$(".pionCouleur").html("<ul><li>"+id+"</li> <li>"+ g.getFromId(id).prenom+"</li><li>"+g.getFromId(id).nom+"</li></ul>")
+	},function(){
+		$(this).html(saveeHtml);
 	});
 
 
