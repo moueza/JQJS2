@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colors switch</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="angularCOLORSswitch.js"></script>
+<link rel="stylesheet" type="text/css" href="angularCOLORSswitch.css">
+</head>
+
+<body>
+    <div ng-app="app">
+        <div ng-controller="myController">
+            			
+            <div id="tablo"> 
+           
+                        <td  ng-repeat="colorr in tabloDecoupe track by $index" style="background-color=">
+                         case{{$index}}
+                        </td> 
+            </div> 
+
+
+                  
+        </div>
+    </div>
+
+</body>
+</html>

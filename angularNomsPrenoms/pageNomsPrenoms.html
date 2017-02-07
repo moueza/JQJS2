@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Noms Prenoms</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="scriptNomsPrenoms.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesNomsPrenoms.css">
+</head>
+
+<body>
+    <div ng-app="app">
+        <div ng-controller="myController">
+            			<!-- Ca commence là -->
+                  <label>Nom </label>
+                	<input ng-model="showContent1"></input>
+
+                                      
+                	
+                    <label>Prenom</label>
+                   <input ng-model="showContent2"></input>
+
+
+                    <button ng-click="add()">Valider</button>
+
+                   
+
+
+                    <table>   
+                     <tr><th>Prenom</th>  <th>NOM</th></tr>
+                     
+                        <tr  ng-repeat="contactt in tablo track by $index">
+                          <td>{{contactt.prenom}}</td>  <td>{{contactt.nom}}</td>
+                        </tr>
+                     
+                    </table>
+
+             
+                   <!--p ng-show="resultat">Résultat2=</p-->
+
+
+
+
+
+
+            				<!-- Ca termine là -->
+        </div>
+    </div>
+
+</body>
+</html>
