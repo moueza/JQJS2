@@ -5,7 +5,7 @@
 		var idString=""+id;
 		console.log("idString="+idString);
 		var memContactIndex;
-		Contact c = new Contact();
+		var c = new Contact();
 		i=0;
 		while((!trouve)&&(i<tabloContact.length)){
           if (idString==(tabloContact[i].id){
