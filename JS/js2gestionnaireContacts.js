@@ -5,51 +5,23 @@ $(document).ready(function(){
 	var g=new Gestionnaire();
 
 
-	var contact1 =	 new Contact();
-	var contact2 =	 new Contact();
-	contact1.setContact("1","Peter","MOUEZA");
-	contact2.setContact("2","Yves","DUPONT");
-
-	
-	g.tabloContact.push(contact1);	
-	g.tabloContact.push(contact2);
-
 	var saveeHtml;
 	$(".pionCouleur").hover(function(){
 		saveeHtml= $(".pionCouleur").html();
-		var id = $(".pionCouleur").attr("data-id");
-		$(".pionCouleur").html("<ul><li>"+id+"</li> <li>"+ g.getFromId(id).prenom+"</li><li>"+g.getFromId(id).nom+"</li></ul>")
+		var id = $(this).children("div").prop("data-id");
+		console.log("idButton="+id);
+		$(".pionCouleur").html('<div id="contactt"><ul><li>'+id+'</li> <li>'+ g.getFromId(id).prenom+'</li><li>'+g.getFromId(id).nom+'</li></ul></div>');
+		console.log("this .anchor="+this+ " .anchor");
+		$(this).children(" .anchor").hide();
+		console.log("$(this).children .anchor role="+$(this).prop("role"));
+		$(this).children(" #contactt").show();
+
 	},function(){
-		$(this).html(saveeHtml);
+		$(this).children(" .anchor").show();
+		$(this).children(" #contactt").hide();
+		console.log("$this="+$(this));
+		
 	});
-
-
-
-
-
-
-
-	var tablePoub="";
-	tablePoub+='<tr><td>'
-						+'<a id="valider" href="#">'
-		              		+'<span>'
-		              			+'Valider'
-							+'</span>'
-						+'</a>'
-				  	+'</td>'
-				+'</tr>'
-	            +'<tr><td>'
-			            +'<a id="effacer" href="#">'
-				              		+'<span>'
-				              			+'Effacer'
-									+'</span>'
-						+'</a>'
-	            	+'</td>'
-	            +'</tr>';
-
-	$("#tableauDesTouches").html(tablePoub);		
-
-
 
 
 
@@ -58,35 +30,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-	$("#pionvert").click(function(){
-		console.log("pionvert");
-									   }
-	);
-
-	$("#pionbleu").click(function(){
-		console.log("pionbleu");
-										   }
-	);
-
-	$("#pionjaune").click(function(){
-		console.log("pionjaune");
-										   }
-	);
-
-	$("#pionrouge").click(function(){
-		console.log("pionrouge");
-										   }
-	);
-
-
-	$(".pionCouleur").click(function(){
-		console.log("pion couleur.  ");
-									   }
-	);
 
 
 });
