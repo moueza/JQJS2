@@ -1,30 +1,8 @@
 
-	var tabloContact =[];
-
-	this.getFromId=function(id){
-		var idString=""+id;
-		console.log("idString="+idString);
-		var memContactIndex;
-		var c = new Contact();
-		var trouve =false;
-		i=0;
-		while((!trouve)&&(i<tabloContact.length)){
-          if (idString==(tabloContact[i].id)){
-			memContactIndex=i;
-          }else{
-          	console.log('not found i='+i);
-          }
-          i++;
-		}
-		c.id=tabloContact[memContactIndex].id;
-		c.prenom=tabloContact[memContactIndex].prenom;
-		c.nom=tabloContact[memContactIndex].nom;
-		return c;
-	}
 
 $(document).ready(function(){
-
-
+	
+	var g=new Gestionnaire();
 
 
 	var contact1 =	 new Contact();
@@ -33,13 +11,13 @@ $(document).ready(function(){
 	contact2.setContact("2","Yves","DUPONT");
 
 	
-	tabloContact.push(contact1);	
-	tabloContact.push(contact2);
+	g.tabloContact.push(contact1);	
+	g.tabloContact.push(contact2);
 
 
 	$(".pionCouleur").hover(function(){
 		var id = $(".pionCouleur").attr("data-id");
-		$(".pionCouleur").html("<ul><li>"+id+"</li> <li>"+ getFromId(id).prenom+"</li><li>"+getFromId(id).nom+"</li></ul>")
+		$(".pionCouleur").html("<ul><li>"+id+"</li> <li>"+ g.getFromId(id).prenom+"</li><li>"+g.getFromId(id).nom+"</li></ul>")
 	});
 
 
