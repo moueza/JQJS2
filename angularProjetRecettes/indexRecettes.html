@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<title>Angular Noms Prenoms</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="scriptRecettes.js"></script>
+<script type="text/javascript" src="scriptRecettesDate.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesRecettes.css">
+</head>
+
+<body>
+    <div ng-app="app">
+        <div ng-controller="myController">
+            		
+                    
+                  <label for="dateSelectY">Year</label>
+                   <select name="dateSelectY" ng-model="dateeY">
+                        <option ng-repeat="m in array10()" value="{{$index+2010}}">{{$index+2010}}</option>
+                        <!-- in array10tablo   -->
+                  </select> 
+
+
+                  <label for="dateSelectM">Date month</label>
+                   <select name="dateSelectM" ng-model="dateeM">
+                        <option ng-repeat="m in array12()" value="{{$index+1}}">{{$index+1}}</option>
+                  </select> 
+
+
+
+                  <!--
+                   <label for="dateSelectM">Date month</label>
+                   <select name="dateSelectM" ng-model="dateeM">
+                        <option ng-repeat="m in [] | range:12" value="{{$index}}">{{$index}}</option>
+                    </select> 
+                    -->
+               
+
+
+                   <label  for="dateSelectD">Date jour</label>
+                   <select name="dateSelectD" ng-model="dateeD">
+                        <option ng-repeat="m in array31()" value="{{$index+1}}">{{$index+1}}</option>
+                   </select> 
+                    <button ng-click="dateeFunc()">Valider Date</button>
+
+                    <div ng-bind="datee">{{datee}}</div>  
+
+
+
+                    <div  ng-show="showRepas">
+                       <label for="repasChoice">Choix repas</label>
+                        <select name="repasChoice" ng-model="repas">
+                          <option  value="petitDej">Petit Dejeuner</option>
+                          <option  value="dej">Dejeuner</option>
+                          <option  value="gouter">Gouter</option>
+                          <option  value="diner">Diner</option>
+                        </select>
+                    </div>
+                  <button ng-click="Func()">Valider repas</button>
+
+
+
+
+                    <div  ng-show="showPlats">
+                       <label for="repasChoice">Choix plats</label>
+                        <select name="repasChoice" ng-model="repas">
+                          <option  value="lentillesMorilles">Lentilles aux morilles</option>
+                          <option  value="blanquette de Veau">blanquette de Veau</option>
+                       </select>
+                    </div>
+                  <button ng-click="Func()">Valider plat</button>
+
+        </div>
+    </div>
+
+</body>
+</html>
