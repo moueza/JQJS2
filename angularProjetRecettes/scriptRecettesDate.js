@@ -4,6 +4,10 @@ function Date(){
 	this.jour=null;	
 	this.mois=null;
 	this.annee=null;
+	
+	this.repas=null;
+
+	this.repasList=[];
 
 
 	this.setDate=function(j,m,ann){

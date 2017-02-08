@@ -1,6 +1,3 @@
-
-
-
 var app = angular.module("app", []);
 app.controller("myController", function($scope){
 // ça commence là
@@ -12,6 +9,13 @@ app.controller("myController", function($scope){
 	$scope.array31tablo=[];
 
 	$scope.showRepas=false;
+
+ 	// var g = new Gestionnaire();
+ 	$scope.g = new Gestionnaire();
+
+
+	$scope.showIngredientsModop=false;
+	
 
 
 
@@ -70,9 +74,44 @@ app.controller("myController", function($scope){
     $scope.dateeFunc = function(){
 	    console.log('in dateeFunc');
 	    d.setDate();	
-		$scope.datee= $scope.dateeY +" "+ $scope.dateeM +" " + $scope.dateeD;
-
+		// $scope.datee= $scope.dateeY +" "+ $scope.dateeM +" " + $scope.dateeD;
+		 $scope.datee= $scope.dateeY;
+		console.log("scope.datee"+$scope.datee);
 		$scope.showRepas=true;
+		$scope.dateColorClass="green";
+		$scope.g.date=$scope.datee;
+	}
+
+
+
+
+
+    $scope.repasFunc = function(){
+	    console.log('in repasFunc');
+	   	$scope.showPlats=true;	
+		
+		$scope.dateColor="green";
+	}
+
+
+
+	$scope.platSelect= function(){
+	  //console.log("g.repasPetitDejeuner"=$scope.g.listJours.repasPetitDejeuner);
+
+	}
+
+
+	$scope.platCreate= function(){
+	  
+	}
+
+
+	$scope.ingredientsCreate= function(){
+	  
+	}
+
+	$scope.createModeOp= function(){
+	  
 	}
 
 });
