@@ -1,0 +1,125 @@
+#tabloDesEqip #table2{
+    background-color : green;
+}
+
+
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url('fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+        url('fonts/glyphicons-halflings-regular.woff') format('woff'),
+        url('fonts/glyphicons-halflings-regular.ttf') format('ttf');
+}
+
+
+.divUser{
+    background-color: #ccc;
+    padding: 20px;
+}
+.divTeam{
+    background-color: #ccc;
+    padding: 20px;
+}
+
+
+#effacer{
+	min-width: 100px;
+	background-color: red;
+}
+
+#valider{
+	min-width: 100px;
+	background-color: green;
+}
+
+
+#lesTablo{
+	
+	float: left;
+}
+#grosTablo{
+	min-width: 300px;
+	margin-left: auto;
+	margin-right: right;
+
+	float: left;
+}
+
+
+
+
+#tableauDesReponses{
+	float: right;
+	border: 1px solid;
+
+}
+#tableauDesTouches{
+	float: right;
+	border: 1px solid;
+
+}
+
+
+
+.pionCouleur{
+	/*min-width: 10px;
+	min-height: 10px;
+	border-color: black;
+
+
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    border-left: 30px;
+    border-right: 30px;
+   	border-top: 30px;
+    border-bottom: : 30px;
+*/
+    border: 1px solid;
+
+	/*http://stackoverflow.com/questions/14628601/can-i-add-background-color-only-for-padding*/
+    /*background-image:linear-gradient(to bottom, rgba(240, 255, 40, 1) 0%, rgba(240, 255, 40, 1) 100%), linear-gradient(to bottom, rgba(240, 40, 40, 1) 0%, rgba(240, 40, 40, 1) 100%);*/
+    /*background-clip: content-box, padding-box;*/
+
+}
+
+#pionvert {
+	/*background-color: green;*/
+
+	background: url('1.gif') no-repeat  0px 0px;
+width: 9px;
+	height: 10px;
+	display: inline-block;
+	margin-right:10px;
+	border-left: 50px;
+}
+#pionbleu{
+	/*background-color: blue;*/
+
+
+	background: url('2.gif') no-repeat 0px 0px;
+	width: 9px;
+	height: 10px;
+	display: inline-block;
+	margin-right:10px;
+}
+#pionjaune{
+	/*background-color: yellow;*/
+
+
+	background: url('5.gif') no-repeat 0px 0px;
+	width: 9px;
+	height: 10px;
+	display: inline-block;
+	margin-right:10px;
+}
+#pionrouge{
+	/*background-color: red;
+*/
+
+	background: url('4.gif') no-repeat 0px 0px;
+	width: 9px;
+	height: 10px;
+	display: inline-block;
+	margin-right:10px;
+}
