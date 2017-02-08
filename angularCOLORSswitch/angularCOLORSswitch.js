@@ -17,7 +17,7 @@ function OrderHTML(){
 
 app.controller("myController", function($scope){
 // ça commence là
-    $scope.tablo = $scope.generateTablo();
+        $scope.tablo = $scope.generateTablo();
  	$scope.generateTablo();
  	$scope.tabloDecoupe=[];
 
@@ -25,13 +25,13 @@ app.controller("myController", function($scope){
  	oh1=new OrderHTML();
  	oh2=new OrderHTML();
  	oh3=new OrderHTML();
-	$scope.tableauOrderHtml()= function(){
+	$scope.tableauOrderHtml= function(){
     
 
     }
 
     /**genere tableau HTML initial*/
-    $scope.generateTablo() = function(){
+    $scope.generateTablo = function(){
     	 var table ="<table>";
     	 var i=0;
          while(i<=4){
@@ -48,7 +48,7 @@ app.controller("myController", function($scope){
 
 
 	/**echange case 0 av case cliquee*/
-     $scope.switchWith(){
+     $scope.switchWith=function(){
 
      }
 
