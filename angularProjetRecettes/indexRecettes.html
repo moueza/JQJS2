@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
 	<title>Angular Noms Prenoms</title>
+  <script type="text/javascript" src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ 
 <script type="text/javascript" src="scriptRecettes.js"></script>
 <script type="text/javascript" src="scriptRecettesDate.js"></script>
+<script type="text/javascript" src="scriptRecettesGestionnaire.js"></script>
+<script type="text/javascript" src="scriptRecettesPlat.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
 <link rel="stylesheet" type="text/css" href="stylesRecettes.css">
 </head>
 
@@ -13,37 +21,28 @@
     <div ng-app="app">
         <div ng-controller="myController">
             		
-                    
-                  <label for="dateSelectY">Year</label>
-                   <select name="dateSelectY" ng-model="dateeY">
-                        <option ng-repeat="m in array10()" value="{{$index+2010}}">{{$index+2010}}</option>
-                        <!-- in array10tablo   -->
-                  </select> 
+                   <div ng-class="{{colorDate}}"> 
+                        
 
 
-                  <label for="dateSelectM">Date month</label>
-                   <select name="dateSelectM" ng-model="dateeM">
-                        <option ng-repeat="m in array12()" value="{{$index+1}}">{{$index+1}}</option>
-                  </select> 
+                          <!--
+                           <label for="dateSelectM">Date month</label>
+                           <select name="dateSelectM" ng-model="dateeM">
+                                <option ng-repeat="m in [] | range:12" value="{{$index}}">{{$index}}</option>
+                            </select> 
+                            -->
+                       
 
 
+                           <label  for="dateSelectD">Date jour</label>
+                           <select name="dateSelectD" ng-model="dateeD">
+                                <option ng-repeat="j in array31()" value="{{$index+1}}">{{$index+1}}</option>
+                           </select> 
+                            <button ng-click="dateeFunc()">Valider Date</button>
 
-                  <!--
-                   <label for="dateSelectM">Date month</label>
-                   <select name="dateSelectM" ng-model="dateeM">
-                        <option ng-repeat="m in [] | range:12" value="{{$index}}">{{$index}}</option>
-                    </select> 
-                    -->
-               
+                            <div ng-bind="datee">{{datee}}</div>  
+                    </div>
 
-
-                   <label  for="dateSelectD">Date jour</label>
-                   <select name="dateSelectD" ng-model="dateeD">
-                        <option ng-repeat="m in array31()" value="{{$index+1}}">{{$index+1}}</option>
-                   </select> 
-                    <button ng-click="dateeFunc()">Valider Date</button>
-
-                    <div ng-bind="datee">{{datee}}</div>  
 
 
 
@@ -55,20 +54,59 @@
                           <option  value="gouter">Gouter</option>
                           <option  value="diner">Diner</option>
                         </select>
-                    </div>
-                  <button ng-click="Func()">Valider repas</button>
-
+                
+                       <button ng-click="repasFunc()">Valider repas</button>
+                   </div>
 
 
 
                     <div  ng-show="showPlats">
-                       <label for="repasChoice">Choix plats</label>
-                        <select name="repasChoice" ng-model="repas">
-                          <option  value="lentillesMorilles">Lentilles aux morilles</option>
-                          <option  value="blanquette de Veau">blanquette de Veau</option>
-                       </select>
+                        <label for="platChoice">Selectionner plat</label>
+                        <select name="platChoice" ng-model="platChoice">
+                            <option ng-repeat="plat in plats" value="{{$index+1}}">{{$index+1}}</option>
+                        </select>
+                        <button ng-click="platSelect()"> Choisir ce plat</button><BR>
+
+                       <label for="platChoiceAdd">OU ajouter plat
+                           <input type="text" name="platChoiceAdd" ng-model="platAjoute"
+                           ng-minlength="3" ng-maxlength="10"  ng-click="ajouterRepas();">
+                       </label>
+                       <button ng-click="platCreate()"> Valider plat</button>
+
+
                     </div>
-                  <button ng-click="Func()">Valider plat</button>
+
+                    <div  ng-show="showIngredientsModop">
+                              <div id="ingredients">
+                                  <div>
+                                     <label for="ingredientChoiceChoose">Ingredient choisir
+                                         <input type="text" name="ingredientChoiceChoose" ng-model="ingredientChoix"
+                                         ng-minlength="3" ng-maxlength="10">
+                                     </label>
+                                     <button ng-click="ingredientsSelect()">Valider selection ingredient</button>
+                                  </div>
+
+                                   <div>
+                                     <label for="ingredientChoiceAdd">Ingredients rajouter
+                                         <input type="text" name="ingredientChoiceAdd" ng-model="ingredientCreate"
+                                         ng-minlength="3" ng-maxlength="10">
+                                     </label>
+                                     <button ng-click="ingredientsCreate()">Valider creation</button>
+                                  </div>
+                              </div>
+
+
+                          <div class="modop">
+                                <label for="modopp">Mode operatoire
+                                   <input type="text" name="modopp" ng-model="modopp"
+                                 ng-minlength="3" ng-maxlength="10">
+                                </label>
+                                <button ng-click="createModeOp()">Modifier mode op</button>
+
+
+                          </div>
+                    </div>
+                  
 
         </div>
     </div>

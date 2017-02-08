@@ -13,6 +13,12 @@ app.controller("myController", function($scope){
 
 	$scope.showRepas=false;
 
+ 	// var g = new Gestionnaire();
+ 	$scope.g = new Gestionnaire();
+
+	$scope.showIngredientsModop=false;
+	
+
 
 
 
@@ -73,6 +79,40 @@ app.controller("myController", function($scope){
 		$scope.datee= $scope.dateeY +" "+ $scope.dateeM +" " + $scope.dateeD;
 
 		$scope.showRepas=true;
+		$scope.dateColorClass="green";
+		g.date=$scope.datee;
+	}
+
+
+
+
+
+    $scope.repasFunc = function(){
+	    console.log('in repasFunc');
+	   	$scope.showPlats=true;	
+		
+		$scope="green";
+	}
+
+
+
+	$scope.platSelect= function(){
+	  console.log("g.repasPetitDejeuner"=g.repasPetitDejeuner);
+
+	}
+
+
+	$scope.platCreate= function(){
+	  
+	}
+
+
+	$scope.ingredientsCreate= function(){
+	  
+	}
+
+	$scope.createModeOp= function(){
+	  
 	}
 
 });
