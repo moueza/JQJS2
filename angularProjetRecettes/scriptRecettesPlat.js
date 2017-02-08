@@ -1,3 +1,5 @@
+
+
 function Plat(){
 	this.ingredients=[];	
 	this.modeOperatoire="";
