@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div ng-app="app">
+    <div ng-controller="myController" ng-show="display">
+			<input type="number" ng-model="a"/>
+			<input type="number" ng-model="b"/>
+			<button type="button" ng-click="add()">+</button>
+			<button type="button" ng-click="minus()">-</button>
+			{{res}}
+
+    </div>
+
+</body>
+</html>

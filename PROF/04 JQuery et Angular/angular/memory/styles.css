@@ -1,0 +1,35 @@
+.recto{
+	height: 90px;
+	width: 90px;
+	background-color: yellow;
+	border-style: solid;
+	text-align: center;
+
+}
+
+.verso{
+	height: 90px;
+	width: 90px;
+	background-color: green;
+	color:yellow;
+	border-style: solid;	
+}
+.vide{
+	height: 90px;
+	width: 90px;
+	background-color: grey;
+	color:black;
+	border-style: solid;	
+}
+
+.plateau{
+	height: 200px;
+	width: 400px;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.numero{
+	font-size: 30px;
+	color: red;
+}

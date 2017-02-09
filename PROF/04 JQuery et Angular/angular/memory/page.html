@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="class.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div ng-app="app">
+    <div ng-controller="myController" class="plateau" ng-show="theend">
+
+        <div ng-repeat="carte in grille.lstCartes track by $index" 
+             ng-click="grille.click($index)" 
+             ng-class="carte.cote">
+             <p class="numero" ng-show="carte.cote=='recto'">{{carte.valeur}}</p>
+        </div> 
+    </div>
+
+</body>
+</html>
