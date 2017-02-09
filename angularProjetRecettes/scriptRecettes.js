@@ -1,5 +1,5 @@
 
-
+//TODO datePicker, champ control, search
 
 var app = angular.module("app", []);
 app.controller("myController", function($scope){
@@ -19,7 +19,7 @@ app.controller("myController", function($scope){
 	$scope.showIngredientsModop=false;
 
 	//$scope.g.listPlats
-	
+
 
 
 

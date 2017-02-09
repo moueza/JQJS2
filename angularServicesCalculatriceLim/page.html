@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div ng-app="app">
+        <div ng-controller="myController">
+    			<!-- Ca commence là -->
+             <label>Nombre1 </label>
+        	<input ng-model="showContent1"></input>
+
+                              
+        	
+            <label>Nombre2</label>
+           <input ng-model="showContent2"></input>
+
+
+
+           
+
+
+           <p>Résultat={{resultat}}</p>
+           <!--p ng-show="resultat">Résultat2=</p-->
+
+
+    		<button ng-click="add()">=</button>
+
+    				<!-- Ca termine là -->
+        </div>
+    </div>
+
+</body>
+</html>

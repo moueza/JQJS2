@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<title>Angular Recettes</title>
+  <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    
+  <script type="text/javascript" src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ 
+<script type="text/javascript" src="scriptRepertoire.js"></script>
+<script type="text/javascript" src="Personne.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link rel="stylesheet" type="text/css" href="stylesRepertoire.css">
+</head>
+
+<body>
+    <div ng-app="app">
+        <div ng-controller="myController">
+
+
+
+            <div class="insertionInput">
+                  <label>Nom
+                    <input ng-model="nom"></input>
+                  </label>
+                                      
+                  
+                  <label>Prenom
+                    <input ng-model="prenom"></input>
+                  </label>
+
+                  <label>Tel
+                    <input ng-model="prenom"></input>
+                  </label>
+
+
+
+                  <button ng-click="addPerson()">Valider</button>
+
+            </div>              
+
+
+                  
+
+
+
+
+
+
+            	
+                  
+               
+
+                <div class="affichage">
+                    <table>   
+                     <tr><th>Prenom</th>  <th>NOM</th> <th>Tel</th></tr>
+                     
+                        <tr  ng-repeat="contactt in personsList track by $index">
+                          <td>{{contactt.prenom}}</td>  <td>{{contactt.nom}}</td>   <td>{{contactt.tel}}</td>
+                        </tr>
+                     
+                    </table>
+                </div>
+
+                  
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -77,13 +77,13 @@
                     <div  ng-show="showRepas">
                        <label for="repasChoice">Choix repas</label>
                         <select name="repasChoice" ng-model="repas">
-                          <!-- 
+                  
                           <option ng-repeat="r in g.repasList" value="{{r}}">{{r}}</option> 
-                          -->
-                          <option  value="petitDej">Petit Dejeuner</option>
+                       
+                          <!--option  value="petitDej">Petit Dejeuner</option>
                           <option  value="dej">Dejeuner</option>
                           <option  value="gouter">Gouter</option>
-                          <option  value="diner">Diner</option>
+                          <option  value="diner">Diner</option-->
                         </select>
                 
                        <button ng-click="repasFunc()">Valider repas</button>
@@ -102,7 +102,7 @@
                            <input type="text" name="platChoiceAdd" ng-model="platAjoute"
                            ng-minlength="3" ng-maxlength="10"  ng-click="ajouterRepas();">
                        </label>
-                       <button ng-click="platCreate()"> Valider plat</button>
+                       <button ng-click="platCreate()">Valider plat</button>
 
 
                     </div>
