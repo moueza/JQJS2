@@ -19,6 +19,7 @@ app.controller("myController", function($scope){
 	$scope.showIngredientsModop=false;
 
 	//$scope.g.listPlats
+	
 
 
 
