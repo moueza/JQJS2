@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<body>
+	<div ng-app="app">
+		<div ng-controller="myController">
+			<select ng-model="fond">
+				<option value="fondbleu">bleu</option>
+				<option value="fondrouge">rouge</option>
+			</select>
+			<input ng-model="fond"></input>
+			<div ng-class="fond">
+				<h1>Welcome Home!</h1>
+				<p>I like it!</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

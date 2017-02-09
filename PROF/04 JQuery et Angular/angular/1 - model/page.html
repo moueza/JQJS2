@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div ng-app="app">
+    <div ng-controller="myController">
+			<!-- Ca commence là -->
+    	<input ng-model="showContent"></input>
+    	{{showContent}}<br/>
+    	<p ng-bind="showContent"></p>
+
+        <label>Afficher le paragraphe</label>
+        <input type="checkbox" ng-model="showContent"/>
+        <p ng-show="showContent">On me voit :))))</p>
+
+				<button ng-click="coucou()">Dis Bonjour au monsieur</button>
+
+				<!-- Ca termine là -->
+    </div>
+
+</body>
+</html>

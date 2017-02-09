@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<body ng-app="app">
+	<div ng-controller="myController" ng-class="fond">
+
+		<label>C'est un animal</label>
+		<input ng-model="choix"></input>
+		<button ng-click="ajouter()">ajouter</button><br/>
+
+		<p ng-repeat="essai in lstEssais track by $index" >{{$index}}:{{essai}}</p>
+
+
+
+	</div>
+</body>
+</html>

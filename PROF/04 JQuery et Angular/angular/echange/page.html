@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div ng-app="app">
+    <div ng-controller="myController" >
+				<span ng-repeat="case in lstCases"
+					style="width: 300px; background-color:{{case.couleur}};	"
+					ng-click="change($index)"
+				>
+					Case 	{{$index}}
+				</span>
+    </div>
+</div>
+
+</body>
+</html>

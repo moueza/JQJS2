@@ -50,7 +50,7 @@ app.controller("myController", function($scope){
  	 	}
  	 	$scope.array12tablo=array12tab;
  	 	return array12tab;
-  	}
+  	};
 
 
 
@@ -70,7 +70,7 @@ app.controller("myController", function($scope){
  	 	}
  	 	$scope.array31tablo=array31tab;
  	 	return array31tab;
-  	}
+  	};
 
 
     $scope.dateeFunc = function(){
@@ -80,8 +80,8 @@ app.controller("myController", function($scope){
 
 		$scope.showRepas=true;
 		$scope.dateColorClass="green";
-		g.date=$scope.datee;
-	}
+		$scope.g.date=$scope.datee;
+	};
 
 
 

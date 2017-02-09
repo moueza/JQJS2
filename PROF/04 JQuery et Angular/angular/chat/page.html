@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="classes.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div ng-app="app">
+    <div ng-controller="myController" >
+
+			<div class="entete">
+				<div class="heure">{{heure}}</div>
+				<span class="qui">
+						<label>nom :</label><input type="text" ng-model="nom"/>
+				</span>
+				<div class="message">
+					<label>message :</label><input type="text" ng-model="message"/>
+				</div>
+				<button type="button" name="button" ng-click="ajout()">Ajouter</button>
+			</div>
+			<div class="liste">
+
+					<table>
+						<tr>
+							<td>
+								heure
+							</td>
+							<td>
+								qui?
+							</td>
+							<td>
+								Message
+							</td>
+						</tr>
+						<tr ng-repeat="me in lstMessages track by $index">
+							<td>
+								{{me.heure}}
+							</td>
+							<td>
+								{{me.nom}} dit
+							</td>
+							<td>
+								{{me.message}}
+							</td>
+						</tr>
+					</table>
+			</div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

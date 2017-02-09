@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div ng-app="app">
+    <div ng-controller="myController">
+    	<form>
+    		chiffre 1 :<input ng-model="a"></input><br/>
+    		chiffre 2 :<input ng-model="b"></input><br/>
+    		<button ng-click="addition()">+</button>
+    		<button ng-click="moins()">-</button>
+    		<button ng-click="fois()">*</button>
+    		<button ng-click="div()">/</button>
+  			 <p>résultat :{{res}}</p>
+				 <p>{{a}} - {{b}} = {{a-b}}</p>
+				 <h1 ng-bind="res"></h1>
+    	</form>
+    </div>
+</body>
+</html>
