@@ -17,7 +17,8 @@ app.controller("myController", function($scope){
  	$scope.g = new Gestionnaire();
 
 	$scope.showIngredientsModop=false;
-	
+
+	//$scope.g.listPlats
 
 
 

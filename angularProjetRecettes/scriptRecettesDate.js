@@ -7,7 +7,6 @@ function Date(){
 	
 	this.repas=null;
 
-	this.repasList=[];
 
 
 	this.setDate=function(j,m,ann){

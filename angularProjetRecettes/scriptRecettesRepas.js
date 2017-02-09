@@ -5,6 +5,6 @@ function Repas(){
 
 	this.plat=null;
 
-	this.platsList=[];
+
 
 }
