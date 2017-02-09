@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="ajax.js" type="text/javascript"></script>
+<script language="JavaScript">
+function submitForm()
+{ 
+	var req = null; 
+	var storage=document.getElementById("storage");
+	storage.innerHTML="Started...";
+	var req=createXHR();
+	req.onreadystatechange = function()
+	{ 
+		storage.innerHTML="Wait server...";
+		if(req.readyState == 4)
+		{
+			if(req.status == 200)
+			{
+				var doc = req.responseText;
+				if (req.status != 404) 
+				{
+					var data = new Array(doc);
+				           storage.innerHTML = data;
+				} 
+				else 
+				{
+					storage.innerHTML="ajax-get-json.js not found";
+				}
+			}	
+			else	
+			{
+				storage.innerHTML="Error: returned status code " + req.status + " " + req.statusText;
+			}	
+		} 
+	}; 
+	req.open("GET", "ajax-get-json.js", true); 
+	req.send(null); 
+} 
+</script>
+
+<title>Ajax Get JSON Demo</title></head>
+
+<body bgcolor="#FFFFFF">
+<p><font size="+3">Ajax Get JSON Demo</font></p>
+<hr>
+<FORM name="ajax" method="POST" action="">
+<p><INPUT type="BUTTON" value=" Submit"  ONCLICK="submitForm()"></p>
+</FORM>
+<hr>
+<div id="storage"></div>
+<hr>
+	
+<p><a href="http://www.xul.fr/" >Ajax tutorial</a></p>
+</body>
+</html>

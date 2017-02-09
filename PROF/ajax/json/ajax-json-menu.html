@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="ajax.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+function loadJSON(fname) 
+{
+	var xhr=createXHR();
+	xhr.open("GET", fname,true);
+	xhr.onreadystatechange=function() 
+	{
+		if (xhr.readyState == 4) 
+		{
+			if (xhr.status != 404) 
+			{
+				document.getElementById("zone").innerHTML = "found";
+				var data=eval("(" + xhr.responseText + ")");
+				document.getElementById("zone").innerHTML = "Menu " + data.menu + "<br>";
+				for(i = 0; i < 3; i++)
+				{
+					document.getElementById("zone").innerHTML += "&nbsp;" + data.commands[i].title + ': ' + data.commands[i].action + "<br>";
+				}
+			} 
+			else 
+			{
+				document.getElementById("zone").innerHTML = fname + " not found";
+			}
+		}
+	}
+	xhr.send(null);
+}
+</script>
+
+<title>Ajax JSON Menu Demo</title></head>
+	
+<body bgcolor="#FFFFFF">
+<p><font size="+3">Ajax JSON Demo - Get a Menu</font></p>
+<hr>
+<FORM name="ajax" method="POST" action="">
+  <p>
+    <INPUT type="BUTTON" value=" Click to load the JSON menu file "  ONCLICK="loadJSON('ajax-json-menu.json')">
+  </p>
+</FORM>
+	
+<div id="zone"></div>
+
+<br>
+<p>
+  <a href="ajax-json-menu.json">View the JSON file</a> </p>
+<br>
+<hr>
+(c) 2006-2011 - <a href="http://www.xul.fr" >Xul.fr</a> 
+</body>
+</html>
+
